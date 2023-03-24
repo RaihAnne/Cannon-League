@@ -488,6 +488,10 @@ PrefabInstance:
       propertyPath: MainCamera
       value: 
       objectReference: {fileID: 1218263548}
+    - target: {fileID: 1237727800038537301, guid: ba24857f71867a447911b8dcf56cbc4f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1237727800147100896, guid: ba24857f71867a447911b8dcf56cbc4f, type: 3}
       propertyPath: m_Name
       value: CannonPlatform
