@@ -6,6 +6,8 @@ public class Bullet : MonoBehaviour
     [SerializeField] private Rigidbody2D BulletRigidBody;
     [SerializeField] private float InitialSpeed = 1;
 
+    private int wallBounceCount = 0;
+
     public void Launch(Vector2 direction)
     {
         if (!this.gameObject.activeInHierarchy)
@@ -23,15 +25,7 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Wall")
-        {
-            FaceBulletToDirection(BulletRigidBody.velocity);
-            return;
-        }
-    }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
         if (collision.gameObject.tag == "Ball")
         {
             HitBallHandler();
@@ -40,9 +34,12 @@ public class Bullet : MonoBehaviour
 
         if (collision.gameObject.tag == "Wall")
         {
+            FaceBulletToDirection(BulletRigidBody.velocity);
             HitWallHandler();
+            return;
         }
     }
+ 
 
     private void HitBallHandler()
     {
@@ -51,7 +48,13 @@ public class Bullet : MonoBehaviour
 
     private void HitWallHandler()
     {
+        if (wallBounceCount < 1)
+        {
+            wallBounceCount++;
+            return;
+        }
 
+        Despawn();
     }
 
     private void Despawn()
