@@ -31,6 +31,6 @@ public class PlayerInputHandler : MonoBehaviour
 
     public bool IsFiring()
     {
-        return Input.GetButton("Fire1");
+        return Input.GetKeyDown(KeyCode.Space);
     }
 }

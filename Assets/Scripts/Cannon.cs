@@ -21,7 +21,7 @@ public class Cannon : MonoBehaviour
     {
         Aim(inputHandler.GetAimDirection());
 
-        if (!Input.GetKeyDown(KeyCode.Space))
+        if (!inputHandler.IsFiring())
         {
             return;
         }
