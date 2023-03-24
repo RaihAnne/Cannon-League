@@ -13,6 +13,21 @@ public class Bullet : MonoBehaviour
             this.gameObject.SetActive(true);
         }
         BulletRigidBody.AddForce(direction * InitialSpeed, ForceMode2D.Impulse);
+        FaceBulletToDirection(direction);
+    }
+
+    private void FaceBulletToDirection(Vector2 direction)
+    {
+        BulletTransform.rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, direction));
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            FaceBulletToDirection(BulletRigidBody.velocity);
+            return;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
