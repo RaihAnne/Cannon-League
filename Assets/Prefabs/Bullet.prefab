@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletTransform: {fileID: 5290087214615799106}
   BulletRigidBody: {fileID: 8580994885141667770}
-  InitialSpeed: 5
+  InitialSpeed: 7
 --- !u!50 &8580994885141667770
 Rigidbody2D:
   serializedVersion: 4
@@ -61,7 +61,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 2
+  m_Mass: 3
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
