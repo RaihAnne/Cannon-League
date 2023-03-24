@@ -36,15 +36,19 @@ public class Cannon : MonoBehaviour
 
     private void Fire()
     {
-        var bulletObject = Instantiate(bulletPrefab.gameObject);
-        bulletObject.transform.position = BarrelTransform.position;
-
+        var bulletObject = GetBullet();
         var bullet = bulletObject.GetComponent<Bullet>();
 
         bullet.Launch(fireDirection);
     }
 
+    private GameObject GetBullet()
+    {
+        var someBullet = Instantiate(bulletPrefab.gameObject);
+        someBullet.transform.position = BarrelTransform.position;
 
+        return someBullet;
+    }
 
 
 }
