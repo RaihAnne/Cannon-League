@@ -26,7 +26,7 @@ public class PlayerInputHandler : MonoBehaviour
             aimDirection.y = 0;
         }
 
-        return aimDirection;
+        return aimDirection.normalized;
     }
 
     public bool IsFiring()
