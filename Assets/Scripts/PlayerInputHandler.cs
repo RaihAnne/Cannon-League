@@ -4,28 +4,33 @@ using UnityEngine;
 
 public class PlayerInputHandler : MonoBehaviour
 {
-    private float xInput = 0;
+    [SerializeField] private Camera MainCamera;
+    [SerializeField] private Transform CannonTransform;
+    private Vector2 aimDirection;
     private bool isFiring = false;
 
-    private void Update()
+    public Vector2 GetAimDirection()
     {
-        xInput = Input.GetAxis("Horizontal");
+        var pointA = CannonTransform.position;
+        var pointB = MainCamera.ScreenToWorldPoint(Input.mousePosition);
 
-        isFiring = Input.GetButton("Fire1");
-    }
+        aimDirection = pointB - pointA;
 
-    public float GetXInput()
-    {
-        if (Mathf.Approximately(xInput, 0))
+        if (Mathf.Approximately(aimDirection.x, 0))
         {
-            xInput = 0;
+            aimDirection.x = 0;
         }
 
-        return xInput;
+        if (Mathf.Approximately(aimDirection.y, 0))
+        {
+            aimDirection.y = 0;
+        }
+
+        return aimDirection;
     }
 
     public bool IsFiring()
     {
-        return isFiring;
+        return Input.GetButton("Fire1");
     }
 }

@@ -57,49 +57,49 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkReader.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkServerSimple.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\UNetwork.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkSceneId.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkTransformVisualizer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\PlayerController.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkCRC.cs" />
     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkAnimator.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkTransform.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\LocalClient.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkCallbacks.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\ChannelBuffer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\SyncList.cs" />
     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkBehaviour.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkIdentity.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkMessageHandlers.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\ClientScene.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkBuffer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\LocalClient.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkMigrationManager.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkServer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\INetworkTransport.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\Properties\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\Messages.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkStartPosition.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\LocalConnections.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkServerSimple.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\LogFilter.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\ConnectionArray.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkLobbyManager.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkTransformChild.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\CustomAttributes.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkInstanceId.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkWriter.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\ChannelBuffer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\UNetwork.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkManager.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkTransform.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkManagerHUD.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkProximityChecker.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkScene.cs" />
     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkDiscovery.cs" />
     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkLobbyPlayer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\ChannelPacket.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkManagerHUD.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\PlayerController.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkTransformChild.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkHash128.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkLobbyManager.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkMigrationManager.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkStartPosition.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\ClientScene.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\INetworkTransport.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkMessageHandlers.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkIdentity.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkSceneId.cs" />
     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkClient.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\ConnectionArray.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\LocalConnections.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\Properties\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkManager.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkInstanceId.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkScene.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\LogFilter.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkServer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkCRC.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkWriter.cs" />
     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkConnection.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkBuffer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\DefaultNetworkTransport.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkProximityChecker.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\CustomAttributes.cs" />
     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\DotNetCompatibility.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\Messages.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkTransformVisualizer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\SyncList.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\DefaultNetworkTransport.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkCallbacks.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\ChannelPacket.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\NetworkHash128.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Runtime\com.unity.multiplayer-hlapi.Runtime.asmdef" />
@@ -339,23 +339,14 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Collections.LowLevel.ILSupport">
+      <HintPath>Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="log4netPlastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
-    </Reference>
-    <Reference Include="unityplastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Cecil">
-      <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@1.10.1\Mono.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Collections.LowLevel.ILSupport">
-      <HintPath>Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Unsafe">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.Unsafe.dll</HintPath>
@@ -369,8 +360,17 @@
     <Reference Include="Unity.Burst.Cecil">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
     </Reference>
+    <Reference Include="log4netPlastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Cecil.Rocks">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@1.10.1\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="unityplastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.39f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>

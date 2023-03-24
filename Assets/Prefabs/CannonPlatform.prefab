@@ -112,6 +112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3188894c1a438941b81a372605b2c6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MainCamera: {fileID: 0}
+  CannonTransform: {fileID: 1237727800038537303}
 --- !u!1 &1237727800147100896
 GameObject:
   m_ObjectHideFlags: 0

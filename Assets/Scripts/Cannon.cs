@@ -19,7 +19,7 @@ public class Cannon : MonoBehaviour
 
     private void Update()
     {
-        Aim(inputHandler.GetXInput());
+        Aim(inputHandler.GetAimDirection());
 
         if (!Input.GetKeyDown(KeyCode.Space))
         {
@@ -28,13 +28,10 @@ public class Cannon : MonoBehaviour
         Fire();
     }
 
-    private void Aim(float xInput)
+    private void Aim(Vector2 aimDirection)
     {
-        float angle = Mathf.Acos(xInput) * 180 / Mathf.PI;
-        BarrelTransform.localRotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        
-        fireDirection.x = Mathf.Cos(angle * Mathf.PI/180);
-        fireDirection.y = Mathf.Sin(angle * Mathf.PI/180);
+        BarrelTransform.rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, aimDirection));
+        fireDirection = aimDirection;
     }
 
     private void Fire()

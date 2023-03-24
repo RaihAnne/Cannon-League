@@ -57,24 +57,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\Tools\MiniJSON.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkManagerPreview.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkTransformEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkDiscoveryEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkInformationPreview.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkManagerHUDEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkBehaviourInspector.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkLobbyManagerEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkMigrationManagerEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkManagerEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\WeaverRunner.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkIdentityEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkTransformChildEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkManagerPreview.cs" />
     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkAnimatorEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkLobbyManagerEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkIdentityEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkBehaviourInspector.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkMigrationManagerEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkManagerHUDEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkInformationPreview.cs" />
     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\Properties\AssemblyInfo.cs" />
     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\Tools\TextUtility.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkScenePostProcess.cs" />
-    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkTransformVisualizerEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkTransformChildEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkTransformEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkTransformPreview.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkScenePostProcess.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkDiscoveryEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkManagerEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\NetworkTransformVisualizerEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.multiplayer-hlapi@1.1.1\Editor\com.unity.multiplayer-hlapi.Editor.asmdef" />
@@ -314,23 +314,14 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Collections.LowLevel.ILSupport">
+      <HintPath>Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="log4netPlastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
-    </Reference>
-    <Reference Include="unityplastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Cecil">
-      <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@1.10.1\Mono.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Collections.LowLevel.ILSupport">
-      <HintPath>Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Unsafe">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.Unsafe.dll</HintPath>
@@ -344,8 +335,17 @@
     <Reference Include="Unity.Burst.Cecil">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
     </Reference>
+    <Reference Include="log4netPlastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Cecil.Rocks">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@1.10.1\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="unityplastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
