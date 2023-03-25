@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class PlayerInputHandler : MonoBehaviour
 {
-    [SerializeField] private Camera MainCamera;
     [SerializeField] private Transform CannonTransform;
+
+    private Camera MainCamera;
     private Vector2 aimDirection;
     private bool isFiring = false;
+
+    private void Awake()
+    {
+        MainCamera = FindObjectOfType<Camera>();
+    }
 
     public Vector2 GetAimDirection()
     {
