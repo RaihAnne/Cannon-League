@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Unity.Netcode;
 
-public class Cannon : MonoBehaviour
+public class Cannon : NetworkBehaviour
 {
     private Vector2 fireDirection;
     [SerializeField] private PlayerInputHandler inputHandler;
@@ -14,11 +13,15 @@ public class Cannon : MonoBehaviour
     private void OnEnable()
     {
         fireDirection = this.gameObject.transform.up;
-        Debug.Log("fireDirection = " + fireDirection);
     }
 
     private void Update()
     {
+        if (!IsOwner)
+        {
+            return;
+        }
+
         Aim(inputHandler.GetAimDirection());
 
         if (!inputHandler.IsFiring())
@@ -50,5 +53,5 @@ public class Cannon : MonoBehaviour
         return bullet;
     }
 
-
+    
 }
