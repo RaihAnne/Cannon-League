@@ -8,8 +8,6 @@ public class Cannon : NetworkBehaviour
     [SerializeField] private Transform BarrelTransform;
     [SerializeField] private Transform PlatformTransform;
 
-    [SerializeField] private Bullet bulletPrefab;
-
     private void OnEnable()
     {
         fireDirection = this.gameObject.transform.up;
@@ -46,7 +44,7 @@ public class Cannon : NetworkBehaviour
 
     private Bullet GetBullet()
     {
-        var someBullet = Instantiate(bulletPrefab.gameObject);
+        var someBullet = BulletPool.Singleton.GetBullet();
         someBullet.transform.position = BarrelTransform.position;
         
         var bullet = someBullet.GetComponent<Bullet>();
