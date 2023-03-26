@@ -1,6 +1,7 @@
 using UnityEngine;
+using Unity.Netcode;
 
-public class Bullet : MonoBehaviour
+public class Bullet : NetworkBehaviour
 {
     [SerializeField] private Transform BulletTransform;
     [SerializeField] private Rigidbody2D BulletRigidBody;
@@ -59,6 +60,7 @@ public class Bullet : MonoBehaviour
 
     private void Despawn()
     {
+        wallBounceCount = 0;
         BulletPool.Singleton.Release(this);
     }
 }
