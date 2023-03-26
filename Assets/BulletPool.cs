@@ -1,6 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Netcode;
+using System;
 
 public class BulletPool : MonoBehaviour
 {
@@ -14,12 +15,17 @@ public class BulletPool : MonoBehaviour
     private void Awake()
     {
         Singleton = this;
+        NetworkManagerCustomEvents.OnClientConnectedEvent += OnClientConnected;
+    }
+
+    private void OnClientConnected(ulong obj)
+    {
         InitPool();
     }
 
-    private void InitPool()
+    public void InitPool()
     {
-        for (int i = 0; i < MinimumPoolCount; i++)
+        for (int i = InactiveBullets.Count; i < MinimumPoolCount; i++)
         {
             MakeNewInactiveBullet();
         }
@@ -33,6 +39,8 @@ public class BulletPool : MonoBehaviour
         }
 
         var newBullet = InactiveBullets.Dequeue();
+        //newBullet.GetComponent<NetworkObject>().Spawn();
+
         return newBullet;
     }
 

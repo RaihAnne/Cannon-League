@@ -16,21 +16,7 @@ public class PlayerSpawner : NetworkBehaviour
     private void Awake()
     {
         InitDictionary();
-    }
-
-    private void OnEnable()
-    {
-        StartCoroutine(WaitForNetworkManagerInit());
-    }
-
-    IEnumerator WaitForNetworkManagerInit()
-    {
-        while (NetworkManager.Singleton == null)
-        {
-            yield return null;
-        }
-
-        NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnect;
+        NetworkManagerCustomEvents.OnClientConnectedEvent += OnClientConnect;
     }
 
     private void OnClientConnect(ulong obj)
