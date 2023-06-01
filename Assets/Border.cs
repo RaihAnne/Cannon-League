@@ -21,7 +21,10 @@ public class Border : MonoBehaviour
         LeftWall.transform.position = GetScreenEdgePosition(Vector2.left);
         RightWall.transform.position = GetScreenEdgePosition(Vector2.right);
         TopWall.transform.position = GetScreenEdgePosition(Vector2.up);
-        BottomWall.transform.position = GetScreenEdgePosition(Vector2.down);
+
+        var newPos = GetScreenEdgePosition(Vector2.down);
+        newPos.y += 3;
+        BottomWall.transform.position = newPos;
 
     }
 

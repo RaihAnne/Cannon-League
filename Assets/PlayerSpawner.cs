@@ -6,9 +6,9 @@ using UnityEngine;
 
 public class PlayerSpawner : NetworkBehaviour
 {
+    [SerializeField] private NetworkObject PlayerObject;
     [SerializeField] private Transform[] SpawnTransforms;
-
-    [SerializeField] private NetworkObject CannonPlatformPrefab;
+    [SerializeField] private FixedJoystick joystick;
 
     private Dictionary<Transform, bool> IsTransformOccupied = new Dictionary<Transform, bool>();
     private List<ulong> PlacedClients = new List<ulong>();
@@ -25,7 +25,7 @@ public class PlayerSpawner : NetworkBehaviour
         {
             return;
         }
-        UpdateClientPlatforms();
+        HandleClientConnect();
     }
 
     private void InitDictionary()
@@ -36,7 +36,7 @@ public class PlayerSpawner : NetworkBehaviour
         }
     }
 
-    private void UpdateClientPlatforms()
+    private void HandleClientConnect()
     {
         var clients = NetworkManager.Singleton.ConnectedClientsIds;
 
@@ -47,7 +47,8 @@ public class PlayerSpawner : NetworkBehaviour
                 continue;
             }
 
-            var networkCannon = NetworkManager.Singleton.SpawnManager.GetPlayerNetworkObject(client);
+            var networkCannon = GetPlayerObject();
+            networkCannon.SpawnAsPlayerObject(client);
             var newPosition = GetAvailableCannonPosition();
             networkCannon.gameObject.transform.SetPositionAndRotation(newPosition, Quaternion.Euler(0, 0, 0));
 
@@ -62,6 +63,13 @@ public class PlayerSpawner : NetworkBehaviour
     {
         var localCannon = NetworkManager.Singleton.SpawnManager.GetLocalPlayerObject();
         localCannon.gameObject.transform.SetPositionAndRotation(toPosition, Quaternion.Euler(0, 0, 0));
+
+        localCannon.gameObject.GetComponentInChildren<PlayerInputHandler>().SetJoystick(joystick);
+    }
+
+    private NetworkObject GetPlayerObject()
+    {
+        return Instantiate(PlayerObject);
     }
 
     private Vector3 GetAvailableCannonPosition()

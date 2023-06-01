@@ -14,15 +14,15 @@ GameObject:
   - component: {fileID: 7679848769436070627}
   - component: {fileID: 8801109700971500482}
   - component: {fileID: 7274886409425492324}
-  - component: {fileID: 5967997909199639446}
-  - component: {fileID: 5744456568421775274}
+  - component: {fileID: 2585242707271210035}
+  - component: {fileID: 1226811327397004905}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5290087214615799106
 Transform:
   m_ObjectHideFlags: 0
@@ -51,7 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletTransform: {fileID: 5290087214615799106}
   BulletRigidBody: {fileID: 8580994885141667770}
-  InitialSpeed: 7
+  InitialSpeed: 18
 --- !u!50 &8580994885141667770
 Rigidbody2D:
   serializedVersion: 4
@@ -156,7 +156,7 @@ MonoBehaviour:
   AlwaysReplicateAsRoot: 0
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &5967997909199639446
+--- !u!114 &2585242707271210035
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5290087214615799164}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9d98da9eaac9a24ba20b49fea6fe108, type: 3}
+  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SyncPositionX: 1
@@ -182,7 +182,7 @@ MonoBehaviour:
   ScaleThreshold: 0.01
   InLocalSpace: 0
   Interpolate: 1
---- !u!114 &5744456568421775274
+--- !u!114 &1226811327397004905
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

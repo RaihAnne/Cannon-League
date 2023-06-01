@@ -59,9 +59,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6602010041682573004}
     m_Modifications:
+    - target: {fileID: 1806791245337996719, guid: 8902bfcd0b7695048a09fad3078d8b5a, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1806791245337996719, guid: 8902bfcd0b7695048a09fad3078d8b5a, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1806791245337996719, guid: 8902bfcd0b7695048a09fad3078d8b5a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.70597124
+      objectReference: {fileID: 0}
     - target: {fileID: 2582119920054521483, guid: 8902bfcd0b7695048a09fad3078d8b5a, type: 3}
       propertyPath: m_Name
-      value: Wall
+      value: GoalPostL
       objectReference: {fileID: 0}
     - target: {fileID: 4203399946542124859, guid: 8902bfcd0b7695048a09fad3078d8b5a, type: 3}
       propertyPath: m_RootOrder
@@ -106,6 +118,10 @@ PrefabInstance:
     - target: {fileID: 4203399946542124859, guid: 8902bfcd0b7695048a09fad3078d8b5a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5179488713925412330, guid: 8902bfcd0b7695048a09fad3078d8b5a, type: 3}
+      propertyPath: IsAGoalPost
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8902bfcd0b7695048a09fad3078d8b5a, type: 3}
@@ -209,9 +225,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6602010041682573004}
     m_Modifications:
+    - target: {fileID: 1806791245337996719, guid: 8902bfcd0b7695048a09fad3078d8b5a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9811321
+      objectReference: {fileID: 0}
+    - target: {fileID: 1806791245337996719, guid: 8902bfcd0b7695048a09fad3078d8b5a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.45211375
+      objectReference: {fileID: 0}
+    - target: {fileID: 1806791245337996719, guid: 8902bfcd0b7695048a09fad3078d8b5a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.124955505
+      objectReference: {fileID: 0}
     - target: {fileID: 2582119920054521483, guid: 8902bfcd0b7695048a09fad3078d8b5a, type: 3}
       propertyPath: m_Name
-      value: Wall (1)
+      value: GoalPostR
       objectReference: {fileID: 0}
     - target: {fileID: 4203399946542124859, guid: 8902bfcd0b7695048a09fad3078d8b5a, type: 3}
       propertyPath: m_RootOrder
@@ -256,6 +284,10 @@ PrefabInstance:
     - target: {fileID: 4203399946542124859, guid: 8902bfcd0b7695048a09fad3078d8b5a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5179488713925412330, guid: 8902bfcd0b7695048a09fad3078d8b5a, type: 3}
+      propertyPath: IsAGoalPost
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8902bfcd0b7695048a09fad3078d8b5a, type: 3}

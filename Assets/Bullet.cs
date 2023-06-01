@@ -11,10 +11,6 @@ public class Bullet : NetworkBehaviour
 
     public void Launch(Vector2 direction)
     {
-        if (!this.gameObject.activeInHierarchy)
-        {
-            this.gameObject.SetActive(true);
-        }
         BulletRigidBody.AddForce(direction * InitialSpeed, ForceMode2D.Impulse);
         FaceBulletToDirection(direction);
     }
@@ -61,6 +57,7 @@ public class Bullet : NetworkBehaviour
     private void Despawn()
     {
         wallBounceCount = 0;
-        BulletPool.Singleton.Release(this);
+        this.NetworkObject.Despawn();
+        Destroy(this);
     }
 }

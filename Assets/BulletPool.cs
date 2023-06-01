@@ -3,7 +3,7 @@ using UnityEngine;
 using Unity.Netcode;
 using System;
 
-public class BulletPool : MonoBehaviour
+public class BulletPool : NetworkBehaviour, INetworkPrefabInstanceHandler
 {
     public static BulletPool Singleton;
     [SerializeField] private int MinimumPoolCount;
@@ -11,6 +11,12 @@ public class BulletPool : MonoBehaviour
     [SerializeField] private Transform bulletPoolTransform;
 
     Queue<Bullet> InactiveBullets = new Queue<Bullet>();
+
+    
+    public override void OnNetworkSpawn()
+    {
+        NetworkManager.PrefabHandler.AddHandler(BulletPrefab.gameObject, this);
+    }
 
     private void Awake()
     {
@@ -31,7 +37,7 @@ public class BulletPool : MonoBehaviour
         }
     }
 
-    public Bullet GetBullet()
+    public Bullet GetBullet(Vector3 position)
     {
         if (InactiveBullets.Count < 1)
         {
@@ -39,12 +45,21 @@ public class BulletPool : MonoBehaviour
         }
 
         var newBullet = InactiveBullets.Dequeue();
-        //newBullet.GetComponent<NetworkObject>().Spawn();
+        newBullet.transform.SetPositionAndRotation(position, Quaternion.identity);
+        newBullet.gameObject.SetActive(true);
+
+        var networBullet = newBullet.GetComponent<NetworkObject>();
+        networBullet.Spawn();
 
         return newBullet;
     }
 
-    public void Release(Bullet someBullet)
+    public void Release(NetworkObject networkBullet)
+    {
+        networkBullet.Despawn();
+    }
+
+    private void AddBulletBackToPool(Bullet someBullet)
     {
         someBullet.gameObject.SetActive(false);
         InactiveBullets.Enqueue(someBullet);
@@ -52,8 +67,22 @@ public class BulletPool : MonoBehaviour
 
     private void MakeNewInactiveBullet()
     {
-        var NewBullet = Instantiate<Bullet>(BulletPrefab, bulletPoolTransform);
+        var NewBullet = Instantiate<Bullet>(BulletPrefab);
         InactiveBullets.Enqueue(NewBullet);
     }
 
+    public void Destroy(NetworkObject networkBullet)
+    {
+        var bullet = networkBullet.GetComponent<Bullet>();
+        AddBulletBackToPool(bullet);
+    }
+
+    public NetworkObject Instantiate(ulong ownerClientId, Vector3 position, Quaternion rotation)
+    {
+        var bulletObject = GetBullet(position);
+        var NetworkBullet = bulletObject.GetComponent<NetworkObject>();
+        return NetworkBullet;
+    }
 }
+
+

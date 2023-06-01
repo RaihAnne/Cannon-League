@@ -1,5 +1,7 @@
 using UnityEngine;
 using Unity.Netcode;
+using System.Collections;
+using System;
 
 public class Cannon : NetworkBehaviour
 {
@@ -8,6 +10,15 @@ public class Cannon : NetworkBehaviour
     [SerializeField] private Transform BarrelTransform;
     [SerializeField] private Transform PlatformTransform;
 
+    private bool IsFireOnCooldown = false;
+    private float cooldownTimeInSeconds = 1;
+    private WaitForSeconds waitForCooldown;
+    public static Action<float> OnLocalCannonFired;
+
+    private void Awake()
+    {
+        waitForCooldown = new WaitForSeconds(cooldownTimeInSeconds);
+    }
     private void OnEnable()
     {
         fireDirection = this.gameObject.transform.up;
@@ -37,19 +48,28 @@ public class Cannon : NetworkBehaviour
 
     private void Fire()
     {
-        var bullet = GetBullet();
+        if (IsFireOnCooldown)
+        {
+            return;
+        }
 
-        bullet.Launch(fireDirection);
+        BulletSpawner.Singleton.GetAndFireBulletServerRpc(BarrelTransform.position, fireDirection);
+        IsFireOnCooldown = true;
+        StartCoroutine(CooldownRoutine());
     }
 
     private Bullet GetBullet()
     {
-        var someBullet = BulletPool.Singleton.GetBullet();
-        someBullet.transform.position = BarrelTransform.position;
+        var someBullet = BulletPool.Singleton.GetBullet(BarrelTransform.position);
         
-        var bullet = someBullet.GetComponent<Bullet>();
-        return bullet;
+        return someBullet;
     }
 
-    
+    public IEnumerator CooldownRoutine()
+    {
+        OnLocalCannonFired(cooldownTimeInSeconds);
+        yield return waitForCooldown;
+
+        IsFireOnCooldown = false;
+    }
 }
